@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+data/rxguard.db
+results/
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+results-full/

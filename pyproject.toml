@@ -1,0 +1,49 @@
+[project]
+name = "rxguard"
+version = "0.1.0"
+description = "Clinical safety guardrails proxy: drop-in OpenAI-compatible middleware that inspects chatbot inputs/outputs and blocks, corrects, or escalates unsafe medical content"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "anthropic>=0.40",
+    "httpx>=0.27",
+    "pydantic>=2.8",
+    "pydantic-settings>=2.4",
+    "pyyaml>=6.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24",
+    "ruff>=0.6",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+# Regex-dense guard modules: pattern readability beats the line limit.
+"app/guards/emergency.py" = ["E501"]
+"app/guards/injection.py" = ["E501"]
+"app/guards/scope.py" = ["E501"]
+"app/guards/extraction.py" = ["E501"]
+
+[tool.pytest.ini_options]
+markers = [
+    "eval: benchmark evals; offline mode runs without an API key, full mode requires one",
+]
+testpaths = ["tests", "evals"]
+asyncio_mode = "auto"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]

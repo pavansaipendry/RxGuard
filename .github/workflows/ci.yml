@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v4
+      - name: Install dependencies
+        run: uv sync
+      - name: Unit tests
+        run: uv run pytest tests/ -q
+      - name: Safety benchmark gate (offline, deterministic guards)
+        run: uv run python evals/run_benchmark.py --mode offline --check evals/thresholds_offline.json
+      # A catch-rate drop below evals/thresholds_offline.json fails this job:
+      # safety regressions break the build, the same way test regressions do.

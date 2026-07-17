@@ -1,0 +1,31 @@
+drug_a,drug_b,severity,description
+warfarin,ibuprofen,Major,NSAIDs increase bleeding risk with warfarin via platelet inhibition and GI irritation; combination substantially raises risk of serious GI hemorrhage.
+warfarin,naproxen,Major,NSAIDs increase bleeding risk with warfarin; combination raises risk of serious GI hemorrhage.
+warfarin,aspirin,Major,Additive anticoagulant/antiplatelet effect; significantly increased bleeding risk unless specifically directed by a physician.
+warfarin,amiodarone,Major,Amiodarone inhibits warfarin metabolism (CYP2C9); INR rises substantially. Warfarin dose reduction and INR monitoring required.
+warfarin,azithromycin,Moderate,Macrolides may potentiate warfarin effect; monitor INR during and after the course.
+warfarin,acetaminophen,Moderate,Regular high-dose acetaminophen (>2g/day for several days) can elevate INR; occasional low doses are generally safe.
+simvastatin,clarithromycin,Major,Strong CYP3A4 inhibition dramatically raises statin levels; risk of rhabdomyolysis. Hold statin during the course or use an alternative antibiotic.
+atorvastatin,clarithromycin,Major,CYP3A4 inhibition raises atorvastatin exposure; increased myopathy/rhabdomyolysis risk.
+simvastatin,amiodarone,Major,Amiodarone raises simvastatin levels; simvastatin dose should not exceed 20 mg daily with amiodarone.
+simvastatin,amlodipine,Moderate,Amlodipine raises simvastatin exposure; simvastatin should not exceed 20 mg daily with amlodipine.
+lisinopril,spironolactone,Major,ACE inhibitor plus potassium-sparing diuretic can cause severe hyperkalemia; requires potassium monitoring.
+lisinopril,potassium chloride,Major,ACE inhibitors reduce potassium excretion; supplemental potassium can cause dangerous hyperkalemia.
+lisinopril,ibuprofen,Moderate,NSAIDs blunt the antihypertensive effect of ACE inhibitors and add renal injury risk especially when dehydrated.
+furosemide,ibuprofen,Moderate,NSAIDs reduce diuretic efficacy and increase risk of renal impairment.
+sertraline,tramadol,Major,Both increase serotonin; combination raises risk of serotonin syndrome and lowers seizure threshold.
+fluoxetine,tramadol,Major,Serotonin syndrome risk; fluoxetine also inhibits CYP2D6 reducing tramadol analgesia.
+sertraline,ibuprofen,Moderate,SSRIs impair platelet function; with NSAIDs the risk of GI bleeding increases several-fold.
+clopidogrel,omeprazole,Major,Omeprazole inhibits CYP2C19 activation of clopidogrel reducing its antiplatelet effect; use pantoprazole instead.
+apixaban,ibuprofen,Major,NSAIDs plus direct oral anticoagulants markedly increase bleeding risk.
+rivaroxaban,aspirin,Major,Combined anticoagulant and antiplatelet therapy increases major bleeding risk; only under physician direction.
+levothyroxine,omeprazole,Moderate,Acid suppression reduces levothyroxine absorption; separate dosing and monitor TSH.
+levothyroxine,calcium carbonate,Moderate,Calcium binds levothyroxine in the gut; separate administration by at least 4 hours.
+metoprolol,albuterol,Moderate,Beta-blockers can blunt bronchodilator response; cardioselectivity is dose-dependent.
+insulin glargine,metoprolol,Moderate,Beta-blockers can mask hypoglycemia symptoms (tachycardia, tremor); monitor glucose closely.
+gabapentin,zolpidem,Moderate,Additive CNS depression; increased sedation and next-day impairment.
+alprazolam,zolpidem,Major,Additive CNS and respiratory depression; combination generally not recommended.
+cyclobenzaprine,tramadol,Major,Additive serotonergic and CNS depressant effects; serotonin syndrome and seizure risk.
+amiodarone,metoprolol,Moderate,Additive bradycardia and AV-node depression; monitor heart rate.
+metformin,furosemide,Moderate,Loop diuretics can affect renal function and metformin clearance; monitor renal function.
+atorvastatin,amlodipine,Minor,Modest increase in atorvastatin exposure; clinically significant mainly at high statin doses.
